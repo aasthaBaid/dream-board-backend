@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 4000; // Fallback to 5000 if not in .env
 
 // --- MIDDLEWARE SECTION ---
 // 1. CORS MIDDLEWARE (must come first)
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: '*' })); // On Vercel, don't restrict to localhost
 
 // 2. JSON PARSER MIDDLEWARE (must come after CORS)
 app.use(express.json());
